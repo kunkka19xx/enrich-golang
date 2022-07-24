@@ -1,7 +1,7 @@
 package services
 
 import (
-	"go/models"
+	"github.com/kunkka19xx/enrich-golang/models"
 )
 
 type AuthService interface {

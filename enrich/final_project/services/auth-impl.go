@@ -2,10 +2,10 @@ package services
 
 import (
 	"context"
-	"go/models"
 	"strings"
 	"time"
 
+	"github.com/kunkka19xx/enrich-golang/models"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
