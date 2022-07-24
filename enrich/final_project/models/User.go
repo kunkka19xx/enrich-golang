@@ -16,19 +16,19 @@ type SingUpInput struct {
 	// createDate      time.Time
 	// updateDate      time.Time
 
-	name            string    `json:"name" bson:"name" binding:"required"`
-	email           string    `json:"email" bson:"email" binding:"required"`
-	password        string    `json:"password" bson:"password" binding:"required,min=8"`
-	passwordConfirm string    `json:"passwordConfirm" bson:"passwordConfirm,omitempty" binding:"required"`
-	role            string    `json:"role" bson:"role"`
-	verified        bool      `json:"verified" bson:"verified"`
-	createdDate     time.Time `json:"created_date" bson:"created_date"`
-	updatedDate     time.Time `json:"updated_date" bson:"update_date"`
+	Name            string    `json:"name" bson:"name" binding:"required"`
+	Email           string    `json:"email" bson:"email" binding:"required"`
+	Password        string    `json:"password" bson:"password" binding:"required,min=8"`
+	PasswordConfirm string    `json:"passwordConfirm" bson:"passwordConfirm,omitempty" binding:"required"`
+	Role            string    `json:"role" bson:"role"`
+	Verified        bool      `json:"verified" bson:"verified"`
+	CreatedDate     time.Time `json:"created_date" bson:"created_date"`
+	UpdatedDate     time.Time `json:"updated_date" bson:"update_date"`
 }
 
 type SingInInput struct {
-	email    string
-	password string
+	Email    string
+	Password string
 }
 
 type DBResponse struct {

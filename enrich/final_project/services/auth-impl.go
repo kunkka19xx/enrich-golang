@@ -6,6 +6,8 @@ import (
 	"time"
 
 	"github.com/kunkka19xx/enrich-golang/models"
+	// "go/models"
+
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -21,14 +23,15 @@ func (uc *AuthServiceImpl) signInUser(*models.SingInInput) (*models.DBResponse, 
 
 // signUpUser implements AuthService
 func (uc *AuthServiceImpl) signUpUser(user *models.SingUpInput) (*models.DBResponse, error) {
-	user.createdDate = time.Now()
-	user.updatedDate = user.createdDate
-	user.email = strings.ToLower(user.email)
-	user.passwordConfirm = ""
-	user.verified = true
-	user.role = "user"
+	user.CreatedDate = time.Now()
+	user.UpdatedDate = user.CreatedDate
+	user.Email = strings.ToLower(user.Email)
+	user.PasswordConfirm = ""
+	user.Verified = true
+	user.Role = "user"
+	user.Name = ""
 
-	hashedPassword, _ := utils.hashedPassword(user.password)
+	// hashedPassword, _ := utils.hashedPassword(user.password)
 
 	return nil, nil
 }
