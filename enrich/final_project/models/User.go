@@ -32,33 +32,33 @@ type SingInInput struct {
 }
 
 type DBResponse struct {
-	id              primitive.ObjectID
-	name            string
-	email           string
-	password        string
-	passwordConfirm string
-	role            string
-	verified        string
-	createDate      time.Time
-	updateDate      time.Time
+	Id              primitive.ObjectID
+	Name            string
+	Email           string
+	Password        string
+	PasswordConfirm string
+	Role            string
+	Verified        string
+	CreateDate      time.Time
+	UpdateDate      time.Time
 }
 
 type UserResponse struct {
-	id         primitive.ObjectID
-	name       string
-	email      string
-	role       string
-	createDate time.Time
-	updateDate time.Time
+	Id         primitive.ObjectID
+	Name       string
+	Email      string
+	Role       string
+	CreateDate time.Time
+	UpdateDate time.Time
 }
 
 func FilteredResponse(user *DBResponse) UserResponse {
 	return UserResponse{
-		id:         user.id,
-		email:      user.email,
-		name:       user.name,
-		role:       user.role,
-		createDate: user.createDate,
-		updateDate: user.updateDate,
+		Id:         User.Id,
+		Email:      User.Email,
+		Name:       User.Name,
+		Role:       User.Role,
+		CreateDate: User.CreateDate,
+		UpdateDate: User.UpdateDate,
 	}
 }
